@@ -59,12 +59,23 @@ class Kiekko {
 	}
 
 	
-	//kiekko lent‰‰ ja kuluu siin‰ samassa, t‰h‰n vois lis‰t‰ 50% 
-	//mahdollisuuden, ett‰ kiekko lent‰‰ suoraan puuhun jolloin se kuluu nopeammin
+	//kiekko lent‰‰ ja kuluu siin‰ samassa, t‰h‰n vois lis‰t‰ 50% mahdollisuuden, ett‰ kiekko lent‰‰ suoraan puuhun jolloin
+	//se kuluu nopeammin. Kiekko voi myˆs hukkua lennon aikana
+
 	public void fly()
 	{
 		System.out.println("Kiekko made of " + plastic + " flies at the speed of " + speed);
 		durability--;
+			if (xyz)
+			{
+				System.out.println("Your Kiekko hit a tree and loses some durability");
+				(durability - 2);
+			}
+			if (xxy)
+			{
+				System.out.println("Your Kiekko flew straight to the lampi. Tough luck.");
+				System.out.println("Do you want to pay a local teenager a 20Ä finders fee to get your Kiekko back?");
+			}
 	}
 	
 	//kiekko kun kuluu tarpeeks niin se hajoaa
