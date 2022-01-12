@@ -3,6 +3,14 @@ public class luokkaJaOlio {
 
 	public static void main(String[] args) {
 
+		Kiekko kiekko1 = new Kiekko();
+		
+		kiekko1.getModel();
+		
+		kiekko1.fly();
+		
+		kiekko1.printInfo();
+		
 	}
 
 }
