@@ -1,15 +1,25 @@
+//importataan Scanneri
+import java.util.Scanner;
 
 public class luokkaJaOlio {
 
 	public static void main(String[] args) {
-
+		
+		//kutsutaan Scanneri siss‰‰n
+		Scanner in = new Scanner(System.in);
+		
 		Kiekko kiekko1 = new Kiekko();
-		
 		kiekko1.getModel();
-		
 		kiekko1.fly();
-		
 		kiekko1.printInfo();
+		
+		System.out.println("Model?");
+		String model = in.nextLine();
+		
+		System.out.println("Model of your kiekko is " + model);
+		
+		Kiekko kiekko2 = new Kiekko("Mako3");
+		kiekko2.printInfo();
 		
 	}
 
@@ -25,6 +35,10 @@ class Kiekko {
 	protected int fade;
 	protected int durability;
 	
+	public Kiekko(String a)
+	{
+		model = a;
+	}
 	public Kiekko()
 	{
 		model = "Thunderbird";
@@ -37,15 +51,19 @@ class Kiekko {
 		return model;
 	}
 	
+	//kiekko lent‰‰ ja kuluu siin‰ samassa, t‰h‰n vois lis‰t‰ 50% 
+	//mahdollisuuden, ett‰ kiekko lent‰‰ suoraan puuhun jolloin se kuluu nopeammin
+	public void fly()
+	{
+		System.out.println("Kiekko made of " + plastic + " flies at the speed of " + speed);
+		durability--;
+	}
+	
+	//kiekko kun kuluu tarpeeks niin se hajoaa
 	public void hajoa()
 	{
 		if (durability <= 0)
 			System.out.println("Kiekko has broken down");
-	}
-	
-	public void fly()
-	{
-		System.out.println("Kiekko made of " + plastic + " flies at the speed of " + speed);
 	}
 	
 	public void printInfo()
