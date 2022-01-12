@@ -21,6 +21,8 @@ public class luokkaJaOlio {
 		Kiekko kiekko2 = new Kiekko("Mako3");
 		kiekko2.printInfo();
 		
+		kiekko2.setPlastic("Champion");
+		
 	}
 
 }
@@ -50,6 +52,12 @@ class Kiekko {
 	{
 		return model;
 	}
+	
+	
+	public void setPlastic(String plastic) {
+		this.plastic = plastic;
+	}
+
 	
 	//kiekko lent‰‰ ja kuluu siin‰ samassa, t‰h‰n vois lis‰t‰ 50% 
 	//mahdollisuuden, ett‰ kiekko lent‰‰ suoraan puuhun jolloin se kuluu nopeammin
