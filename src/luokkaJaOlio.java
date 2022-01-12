@@ -15,7 +15,7 @@ class Kiekko {
 	protected int glide;
 	protected int turn;
 	protected int fade;
-	protected int stability;
+	protected int durability;
 	
 	public Kiekko()
 	{
@@ -31,7 +31,7 @@ class Kiekko {
 	
 	public void hajoa()
 	{
-		if (stability <= 0)
+		if (durability <= 0)
 			System.out.println("Kiekko has broken down");
 	}
 	
