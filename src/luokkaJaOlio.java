@@ -15,6 +15,25 @@ class Kiekko {
 	protected int glide;
 	protected int turn;
 	protected int fade;
+	protected int stability;
+	
+	public Kiekko()
+	{
+		model = "Thunderbird";
+		plastic = "Star";
+		speed = 11;
+	}
+	
+	public String getModel()
+	{
+		return model;
+	}
+	
+	public void hajoa()
+	{
+		if (stability <= 0)
+			System.out.println("Kiekko has broken down");
+	}
 	
 	public void fly()
 	{
